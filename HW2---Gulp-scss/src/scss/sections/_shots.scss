@@ -1,0 +1,157 @@
+.shots{
+    padding-top: 39.5px;
+    padding-left: 25px;
+    .shots_title{
+        margin-top: 38px;
+        @include post-title;
+        font-size: 14px;
+        margin-bottom: 13px;
+        
+    }
+    .shots_link{
+        display: none;
+    }
+    .shots_items{
+        .shots_item{
+            max-width: 301px;
+            max-height: 301px;
+            margin-bottom: 42px;
+            img{
+                width: 100%;
+            }
+        }
+        .shots_item:nth-child(2){
+            display: none;
+        }
+        .shots_item:nth-child(3){
+            display: none;
+        }
+        .shots_item:nth-child(4){
+            display: none;
+        }
+    }
+    
+}
+@media (min-width: 768px){
+    .shots{
+        background-color: rgba(0, 0, 0, 0.03);
+        padding-top: 60px;
+        padding-left: 80px;
+        padding-right: 92px;
+        .shots_titles{
+            display: flex;
+            justify-content: space-between;
+            .shots_title{
+                margin-top: initial;
+                @include post-title;
+                font-size: 16px;
+                margin-bottom: 13px;
+                
+            }
+            .shots_link{
+                display: block;
+                @include post-title;
+                text-decoration: none;
+            }
+        }
+        .shots_items{
+            display: flex;
+            flex-direction: row;
+            gap: 9px;
+        
+            .shots_item{
+                max-width: 250px;
+                max-height: 249px;
+                margin-bottom: 42px;
+                img{
+                    width: 100%;
+                }
+            }
+            .shots_item:nth-child(2){
+                display: initial;
+                max-width: 250px;
+                max-height: 249px;
+                margin-bottom: 42px;
+                img{
+                    width: 100%;
+                }
+            }
+            .shots_item:nth-child(3){
+                display: initial;
+                max-width: 250px;
+                max-height: 249px;
+                margin-bottom: 42px;
+                img{
+                    width: 100%;
+                }
+            }
+            .shots_item:nth-child(4){
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width: 1170px){
+    .shots{
+        background-color: rgba(0, 0, 0, 0.03);
+        padding: 0;
+        .shots_titles{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 46.5px;
+            .shots_title{
+                margin-top: initial;
+                @include post-title;
+                font-size: 16px;
+                margin-bottom: 13px;
+                
+            }
+            .shots_link{
+                display: block;
+                @include post-title;
+                text-decoration: none;
+            }
+        }
+        .shots_items{
+            display: flex;
+            flex-direction: row;
+            gap: 9px;
+        
+            .shots_item{
+                max-width: 285px;
+                max-height: 285px;
+                margin-bottom: 42px;
+                img{
+                    width: 100%;
+                }
+            }
+            .shots_item:nth-child(2){
+                display: initial;
+                max-width: 285px;
+                max-height: 285px;
+                margin-bottom: 42px;
+                img{
+                    width: 100%;
+                }
+            }
+            .shots_item:nth-child(3){
+                display: initial;
+                max-width: 285px;
+                max-height: 285px;
+                margin-bottom: 42px;
+                img{
+                    width: 100%;
+                }
+            }
+            .shots_item:nth-child(4){
+                display: initial;
+                max-width: 285px;
+                max-height: 285px;
+                margin-bottom: 42px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

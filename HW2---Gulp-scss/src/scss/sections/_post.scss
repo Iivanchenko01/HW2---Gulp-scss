@@ -1,0 +1,110 @@
+.post{
+    margin-top: 38px;
+    padding-left: 25px;
+    .post_title{
+        @include post-title;
+        font-size: 14px;
+    }
+    .post_items{
+        .post_item{
+            min-height: 196px;
+            display: flex;
+            flex-direction: column; 
+            margin: 0;
+            margin-bottom: 28.5px;
+            .post_item_title{
+                margin: 0;
+                @include post-title;
+                font-size: 14px;
+            }
+            .post_item_descr{
+                margin: 0;
+                @include post-descr;
+                font-size: 11px;
+            }
+            .post_item_text{
+                display: none;
+            }
+        }
+        .post_item:last-child{
+            display: none;
+        }
+    }
+    
+
+    
+}
+@media (min-width: 768px){
+    .post{
+        margin-top: 56px;
+        padding-left: 80px;
+        .post_title{
+            font-size: 16px;
+        }
+        .post_items{
+            .post_item{
+              display: flex;
+              flex-direction: row;
+              
+              .post_item_content{
+                padding-left: 20px;
+                .post_item_title{
+                    font-size: 16px;
+                }
+                .post_item_descr{
+                    font-size: 12px;
+                }
+                .post_item_text{
+                    display: block;
+                    @include post-text;
+                    padding-right: 275px;
+                    margin: 0;
+                    padding-top: 13px;
+                }
+              }  
+            }
+            .post_item:last-child{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+}
+@media (min-width: 1170px){
+    .post{
+        margin-top: 69px;
+        padding-left: 0px;
+        .post_title{
+            font-size: 16px;
+        }
+        .post_items{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .post_item{
+              display: flex;
+              flex-direction: row;
+              
+              .post_item_content{
+                padding-left: 20px;
+                .post_item_title{
+                    font-size: 16px;
+                }
+                .post_item_descr{
+                    font-size: 12px;
+                }
+                .post_item_text{
+                    display: block;
+                    @include post-text;
+                    padding-right: 0px;
+                    margin: 0;
+                    padding-top: 13px;
+                }
+              }  
+            }
+            .post_item:last-child{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+}
+}

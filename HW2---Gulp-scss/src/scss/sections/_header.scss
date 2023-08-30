@@ -1,0 +1,139 @@
+.header {
+    position: relative;
+    .mobile_menu {
+      display: block;
+      text-align: end;
+      padding: 23px 28px 0 0;
+      
+  
+      .burger_btn {
+        position: relative;
+        text-align: right;
+        width: 44px;
+        height: 37px;
+        border: none;
+        background-color: black;
+  
+        span {
+          position: absolute;
+          width: 17px;
+          height: 2px;
+          background-color: #fff;
+          left: 13px;
+          top: 17px;
+        }
+  
+        span:nth-child(1) {
+          top: 13px;
+        }
+  
+        span:nth-child(3) {
+          top: 21px;
+        }
+      }
+      .burger_btn.active{
+        span:nth-child(1) {
+            top: 17px;
+            transform: rotate(45deg);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+          }
+        span:nth-child(3) {
+            top: 17px;
+             transform: rotate(-45deg);
+          }
+      }
+    }
+  
+    .menu_list {
+      margin: 0;
+      display: none;
+      position: absolute;
+      padding-left: 13px;
+      width: 182px;
+      height: 208px;
+      background-color: #f5f5f5;
+      right: 28px;
+      text-align: left;
+      
+      
+      .menu_link {
+        list-style: none;
+        text-decoration: none; 
+        margin-bottom: 8px;       
+        a {
+          text-decoration: none;
+          @include nav-text-320;
+        }
+        a:hover{
+          color: #57A4A4;
+        }
+      }
+    }
+    .menu_list.active{
+        display: block;
+        
+  
+    }
+    .intro_img{
+      padding:  23px 28px 0 25px;
+      min-width: 320px;
+      min-height: 150px;
+      img {
+        width: 100%;
+        }
+        
+    }
+}
+  
+@media (min-width: 768px) {
+.header {
+  .mobile_menu {
+    .burger_btn {
+      display: none;
+      }
+      }
+      .menu_list{
+        position: initial;
+        background-color: initial;
+        width: 609px;
+        height: 22px;
+        display: flex;
+        padding: 18px 167px 15px 164px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 34px;
+        a {
+          @include nav-text-320;
+          white-space: nowrap;
+          
+        }
+        
+      }
+      .intro_img{
+        padding: 43px 92px 0 80px;
+      }
+  }
+      
+  }
+@media (min-width: 1170px){
+.header{
+  .mobile_menu{
+    display: initial;
+    text-align: initial;
+    padding: 16px 178px 17px 179px;
+    margin: 0 auto;
+  }
+  .menu_list{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 68px;
+  }
+  .intro_img{
+    padding: 0;
+  }
+}
+} 

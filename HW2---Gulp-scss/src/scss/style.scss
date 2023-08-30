@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+@import './mixins/_mixins';
+@import './variables/_variables';
+@import './sections/_header';
+@import './sections/_main';
+@import './sections/_post';
+@import './sections/_shots';
+@import './sections/_footer';
